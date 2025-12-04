@@ -12,6 +12,9 @@ Seu objetivo é simular operações bancárias básicas, como **cadastro de cont
 
 O projeto não foi totalmente finalizado, mas encontra-se em **estágio avançado**, com toda a estrutura pronta, classes organizadas e API configurada para execução.
 
+🎥 Vídeo Explicando o Projeto:
+👉 https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view?usp=sharing
+
 ---
 
 ## 🧱 Estrutura do Projeto
