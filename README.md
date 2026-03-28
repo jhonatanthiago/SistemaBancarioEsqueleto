@@ -146,13 +146,6 @@ O sistema foi estruturado para futura integração com banco de dados relacional
 
 ---
 
-## 🎥 Demonstração
-
-Vídeo explicando o projeto:
-[https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view](https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view)
-
----
-
 ## 📄 Observação
 
 Projeto acadêmico desenvolvido com foco em aprendizado prático de desenvolvimento back-end, com ênfase na construção de APIs REST e organização de sistemas em camadas.
