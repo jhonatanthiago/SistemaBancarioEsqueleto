@@ -1,105 +1,130 @@
-# 📘 Sistema Bancário Digital
+# 💳 Sistema Bancário Digital API
 
-Projeto da disciplina **Linguagem de Programação II**
-Aluno: **Jhonatan Thiago**
+Projeto desenvolvido na disciplina de Linguagem de Programação II  
+Aluno: Jhonatan Thiago  
 
 ---
 
 ## 📌 Sobre o Projeto
 
-Este projeto é um **Sistema Bancário Digital** desenvolvido em **Java** utilizando **Maven** e **Spring Boot**.
-Seu objetivo é simular operações bancárias básicas, como **cadastro de contas**, **consulta**, **depósito** e **saque**, aplicando conceitos de Programação Orientada a Objetos, camadas e API REST.
+Este projeto consiste em uma API REST de um sistema bancário digital, desenvolvida em Java com Spring Boot.
 
-O projeto não foi totalmente finalizado, mas encontra-se em **estágio avançado**, com toda a estrutura pronta, classes organizadas e API configurada para execução.
+A aplicação simula operações bancárias essenciais, como criação de contas, consultas, depósitos e saques, aplicando conceitos de Programação Orientada a Objetos (POO), arquitetura em camadas e boas práticas de desenvolvimento back-end.
 
-🎥 Vídeo Explicando o Projeto:
-👉 https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view?usp=sharing
+O sistema foi projetado com foco em organização, escalabilidade e facilidade de manutenção, estando preparado para futura integração com banco de dados.
+
+---
+
+## 🚀 Funcionalidades
+
+- Criar conta bancária  
+- Listar contas cadastradas  
+- Buscar conta por número  
+- Realizar depósitos  
+- Realizar saques  
 
 ---
 
 ## 🧱 Estrutura do Projeto
 
-O sistema foi organizado em camadas conforme boas práticas:
+O sistema foi organizado em camadas seguindo boas práticas de desenvolvimento:
 
 ```
+
 src/main/java/com/sistemabancario/
- ├── model/
- │     └── Conta.java
- ├── repository/
- │     └── ContaRepository.java
- ├── service/
- │     └── ContaService.java
- ├── controller/
- │     └── ContaController.java
- └── Main.java
-```
+├── model/
+│     └── Conta.java
+├── repository/
+│     └── ContaRepository.java
+├── service/
+│     └── ContaService.java
+├── controller/
+│     └── ContaController.java
+└── Main.java
 
-### ✔️ **model**
+````
 
-Contém a classe `Conta`, que representa uma conta bancária com dados como número, titular, saldo e tipo.
+### 🔹 Model
+Representa as entidades do sistema.  
+Ex: `Conta.java` contém dados como número, titular, saldo e tipo.
 
-### ✔️ **repository**
+### 🔹 Repository
+Responsável pelo gerenciamento dos dados (armazenados em memória durante a execução).
 
-Armazena as contas em memória durante a execução do programa.
+### 🔹 Service
+Contém as regras de negócio, como operações de depósito, saque e consultas.
 
-### ✔️ **service**
+### 🔹 Controller
+Responsável por expor a API REST, permitindo comunicação via HTTP.
 
-Contém as regras de negócio (depósito, saque, busca de contas, etc).
-
-### ✔️ **controller**
-
-Exposição da API REST, permitindo chamadas HTTP como:
-
-* `POST /contas`
-* `GET /contas`
-* `GET /contas/{numero}`
-* `POST /contas/{numero}/depositar`
-* `POST /contas/{numero}/sacar`
-
-### ✔️ **Main.java**
-
-Classe responsável por iniciar o Spring Boot.
-Ao rodar, aparece no terminal:
-
-```
-=== Sistema Bancario Digital API rodando ===
-```
+### 🔹 Main
+Classe responsável por iniciar a aplicação Spring Boot.
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## 🔗 Endpoints da API
+
+| Método | Rota | Descrição |
+|--------|------|----------|
+| POST   | /contas | Criar conta |
+| GET    | /contas | Listar contas |
+| GET    | /contas/{numero} | Buscar conta |
+| POST   | /contas/{numero}/depositar | Depositar |
+| POST   | /contas/{numero}/sacar | Sacar |
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- Java 21  
+- Spring Boot  
+- Maven  
+- API REST  
+- Arquitetura em camadas  
+- Git e GitHub  
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- Programação Orientada a Objetos (POO)  
+- Separação de responsabilidades  
+- Desenvolvimento de APIs REST  
+- Organização em camadas  
+- Boas práticas de desenvolvimento  
+
+---
+
+## ▶️ Como Executar o Projeto
 
 ### 🔧 Requisitos
 
-* Java 21+
-* Maven instalado
-* VS Code ou IntelliJ/Eclipse
-* Extensão Spring Boot ou plugin Java
+- Java 21+  
+- Maven instalado  
+- IDE (VS Code, IntelliJ ou Eclipse)
 
-### ▶️ Executar o Projeto
+### ▶️ Execução
 
 ```bash
 mvn spring-boot:run
-```
+````
 
-Se tudo carregar corretamente, você verá no terminal:
+Após iniciar, a aplicação estará disponível em:
 
 ```
-Tomcat started on port 8080
-=== Sistema Bancario Digital API rodando ===
+http://localhost:8080
 ```
 
 ---
 
-## 🧪 Testes da API (sem usar navegador)
+## 🧪 Testando a API
 
-Como o navegador não reconhece rotas REST, o ideal seria usar:
+Recomenda-se o uso de ferramentas como:
 
 * Postman
 * Insomnia
-* Curl
 
-Exemplo usando curl:
+Exemplo com curl:
 
 ```bash
 curl -X GET http://localhost:8080/contas
@@ -107,20 +132,30 @@ curl -X GET http://localhost:8080/contas
 
 ---
 
-## ⚠️ Observação Importante
+## 📈 Possíveis Melhorias
 
-O projeto encontra-se em estágio avançado de desenvolvimento, com arquitetura estruturada em camadas e implementação de uma API REST funcional, permitindo fácil expansão e integração com banco de dados e novas funcionalidades.
-
-O foco da entrega foi:
-
-* aplicação dos conceitos de POO,
-* organização em camadas,
-* uso de Maven,
-* uso de Spring Boot,
-* e construção de uma API REST completa.
+* Integração com banco de dados (PostgreSQL)
+* Uso de JPA/Hibernate
+* Implementação de autenticação (Spring Security)
+* Criação de testes automatizados (JUnit)
+* Documentação da API (Swagger)
 
 ---
 
-## 📄 Licença
+## 🎥 Demonstração
 
-Projeto acadêmico — livre para estudo.
+Vídeo explicando o projeto:
+[https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view](https://drive.google.com/file/d/1kBRnGe7M5K8cvLBMxvxsVXEdqGZar3_i/view)
+
+---
+
+## 📄 Observação
+
+Projeto acadêmico desenvolvido com foco em aprendizado prático de desenvolvimento back-end, com ênfase na construção de APIs REST e organização de sistemas em camadas.
+
+---
+
+## 👨‍💻 Autor
+
+Jhonatan Thiago
+[https://github.com/jhonatanthiago](https://github.com/jhonatanthiago)
