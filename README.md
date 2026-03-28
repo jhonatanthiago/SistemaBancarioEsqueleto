@@ -140,6 +140,10 @@ curl -X GET http://localhost:8080/contas
 * Criação de testes automatizados (JUnit)
 * Documentação da API (Swagger)
 
+## 💾 Integração com Banco de Dados (Planejada)
+
+O sistema foi estruturado para futura integração com banco de dados relacional utilizando PostgreSQL e JPA/Hibernate, permitindo persistência de dados e maior escalabilidade da aplicação.
+
 ---
 
 ## 🎥 Demonstração
