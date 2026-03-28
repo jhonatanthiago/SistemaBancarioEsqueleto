@@ -109,7 +109,7 @@ curl -X GET http://localhost:8080/contas
 
 ## ⚠️ Observação Importante
 
-Devido ao tempo e dificuldades com ambiente, **a API não foi completamente finalizada e testada**, porém todo o sistema está estruturado, funcional internamente e pronto para expansão.
+O projeto encontra-se em estágio avançado de desenvolvimento, com arquitetura estruturada em camadas e implementação de uma API REST funcional, permitindo fácil expansão e integração com banco de dados e novas funcionalidades.
 
 O foco da entrega foi:
 
